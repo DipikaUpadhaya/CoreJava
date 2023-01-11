@@ -15,4 +15,14 @@ public class MinimalDto {
         this.address = address;
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "MinimalDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

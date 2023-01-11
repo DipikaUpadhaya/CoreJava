@@ -68,7 +68,21 @@ public class EmployeeProgram {
         System.out.println("list of  employees whose name starts from “s” and age is greater than 25: ");
         employeeIO.displayEmployeeList(filterName);
 
-        //
+        //Map a list of employees to List of minimal Dto class along with above filters from point number 15 to 21.
+        //Filter the employees whose salary is greater than 20000.
+        //Filter the employees whose designation is CTO or DCTO.
+        //Filter the employee whose age is between 20 and 25 and salary is less than 15000.
+        //Filter the employees who are using gmail.
+        //Filter the employee whose mobile number length is not equal to 10.
+        //Filter the employees whose name starts from “s” and age is greater than 25.
+
+        List<MinimalDto> minimalDtoList=employeeList
+                .stream()
+                .map(employee -> new MinimalDto(employee.getId(), employee.getName(), employee.getAddress(), employee.getEmail()))
+                .collect(Collectors.toList());
+        System.out.println("Minimal dto list: ");
+        System.out.println(minimalDtoList);
+
 
     }
 }
